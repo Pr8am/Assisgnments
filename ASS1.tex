@@ -183,7 +183,7 @@ EE23BTECH11221
 \bigskip
 
 \renewcommand{\thefigure}{\theenumi}
-\renewcommand{\thetable}{\theenumi}
+\renewcommand{\thetable}{\arabic{table}}
 %\renewcommand{\theequation}{\theenumi}
 
 %\begin{abstract}
@@ -215,11 +215,12 @@ EE23BTECH11221
 \begin{flushleft}
 We know 
 \end{flushleft}
-\begin{align}
-		M = 2.5 kg \\
-		T = 200 N  \\
-		l = 20.0 m 
-\end{align}
+\begin{table}[!h]
+    \centering
+    \input{Tables/table1} \vspace{0.5cm}
+    \caption{Values} 
+    \label{tab:mytable}
+\end{table}
 Mass per unit length
 \begin{align}
 		\mu = \frac{M}{l}= \frac {2.5}{20} = 0.125\:kg m^{-1}
@@ -234,5 +235,32 @@ Calculating the time taken,
 \begin{align}
 t = \frac{l}{v} = \frac{20}{40} = 0.5\:s
 \end{align}
-Hence, the time taken to reach the other end of the string is 0.5 s
+We can calculate the equation of the wave by using
+\begin{align}
+y = A sin[kx + \omega t]
+\end{align}
+We know
+\begin{align}
+\nu = \frac{1}{t} = 2\:Hz \\
+\therefore \omega = 2 \pi \nu = 4 \pi
+\end{align}
+Wavelength, 
+\begin{align}
+v &= \lambda \nu \\
+40 &= 2 \lambda \\
+\therefore \lambda &= 20 m
+\end{align}
+from this, we get the value of k
+\begin{align}
+k = \frac{2 \pi}{\lambda} = \frac{\pi}{10}
+\end{align}
+Hence, the wave equation is given by \\
+\begin{align}
+y = A sin[\frac{\pi x}{10} + 4 \pi t]
+\end{align}
+Differentiating this displacement equation and putting the values, we can get the wave velocity equation
+\begin{align}
+V_y = 8 \pi A cos[\frac{\pi x}{10} + 4 \pi t]
+\end{align}
+and the time taken to reach the other end of the string is 0.5 s
 \end{document}
